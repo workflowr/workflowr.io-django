@@ -1,6 +1,9 @@
 from django.db import models
 
-class User(models.Model):
+from django.contrib.auth.models import User
+
+class Author(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     email = models.EmailField()
 
@@ -24,7 +27,7 @@ class Publication(models.Model):
 class Project(models.Model):
     name = models.CharField(max_length=200)
     url = models.CharField(max_length=200)
-    author = models.ManyToManyField(User)
+    author = models.ManyToManyField(Author)
     tag = models.ManyToManyField(Tag)
     publication = models.ManyToManyField(Publication)
 
