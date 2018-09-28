@@ -1,0 +1,29 @@
+.btn {
+  margin: 5px 5px 5px 5px
+}
+
+/* footer 
+https://github.com/twbs/bootstrap/blob/v3.3.7/docs/examples/sticky-footer/sticky-footer.css
+*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 100px;
+  background-color: #f5f5f5;
+}
+
+body > .container-fluid {
+  padding: 60px 15px 0;
+}
