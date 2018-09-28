@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-sm-6">
+    {% load static %}
+    <img style="width: 400px; height: 400px;" alt="workflowr hex" src="{% static 'images/workflowr-hex.png' %}">
+  </div>
+  <div class="col-sm-6">
+    <div class="well">
+      <h4>Organized</h4>
+      <p>
+        No more struggling to find your data and scripts.
+      </p>
+    </div>
+    <div class="well">
+      <h4>Reproducible</h4>
+      <p>
+        Automatically follow best practices like using version control while you focus
+        on your data analysis.
+      </p>
+    </div>
+    <div class="well">
+      <h4>Shareable</h4>
+      <p>
+        Share your research with the entire scientific community.
+      </p>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">Search</div>
+      <div class="panel-body">
+        Find interesting open science projects.
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">Create</div>
+      <div class="panel-body">
+        Start your own workflowr project
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">Contribute</div>
+      <div class="panel-body">
+        <p>
+          There are lots of ways you can support our open science community:
+        </p>
+        <ul>
+          <li>
+            Share your favorite projects on Twitter
+          </li>
+          <li>
+            Write a blog post
+          </li>
+          <li>
+            Fix an open Issue
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
