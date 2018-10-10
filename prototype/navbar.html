@@ -6,13 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>navbar</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
   <style>
     .navbar {
       background-color: rgb(110, 46, 158);
+      font-size: 16px;
+    }
+    /* Overriding bootstrap defaults */
+    .navbar-default .navbar-nav > li > a {
+      color: white;
+    }
+    .navbar-default .navbar-nav > li > a:hover {
+      color: rgb(110, 46, 158);
+      background-color: white;
+    }
+    .navbar-brand {
+      padding: 0;
     }
     .navbar-brand > img {
-      max-height: 35px;
+      max-height: 50px;
     }
   </style>
 </head>
@@ -21,32 +35,28 @@
 
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          data-target="#navbar-collapsed" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
-        <!--    <img alt="Brand" src="../sites/static/images/workflowr-hex.png"> -->
-            <img alt="Brand" src="images/logo-workflowr-inverse.png">
-          </a>
+        <a class="navbar-brand" href="navbar.html">
+          <img alt="Brand" src="images/logo-workflowr-inverse.png">
+        </a>
       </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse" id="navbar-collapsed">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="navbar.html">Home <span class="sr-only">(current)</span></a></li>
           <li><a href="#">Features</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">Community</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Documentation</a></li>
-            <button type="button" class="btn btn-default navbar-btn">Login</button>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Login</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -55,7 +65,9 @@
   <h1>Navigation bar protoype</h1>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
