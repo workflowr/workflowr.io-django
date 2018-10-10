@@ -6,3 +6,31 @@ h1, h2, h3 {
 .panel {
   min-height: 220px;
 }
+
+
+.flower-logo {
+  max-height: 250px;
+  display: block;
+  margin: auto;
+}
+
+
+a {
+  color: rgb(110, 46, 158);
+}
+
+
+a:hover {
+  color: black;
+}
+
+
+.intro {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+
+.intro li {
+  margin: 20px auto;
+}
