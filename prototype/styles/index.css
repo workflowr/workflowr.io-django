@@ -15,6 +15,14 @@ h1, h2, h3 {
 }
 
 
+/* When the screen is small, decrease the size of the logo. */
+@media only screen and (max-width: 750px) {
+  .flower-logo {
+      max-height: 150px;
+  }
+}
+
+
 a {
   color: rgb(110, 46, 158);
 }
@@ -88,13 +96,21 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
-  /*height: 300px;*/
   background-color: black;
   color: white;
   border-top: 25px solid rgb(110, 46, 158);
 }
 
+/*
+When the screen is small, the footer covers content. The standard solution is to
+set a fixed height for the footer. This doesn't work since I have columns in the
+footer which expand the height at smaller screen widths.
+*/
+@media only screen and (max-width: 750px) {
+  body {
+      margin-bottom: 600px;
+  }
+}
 
 .footer a {
   color: white;
