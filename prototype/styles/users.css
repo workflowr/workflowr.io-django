@@ -1,0 +1,19 @@
+.profile-small {
+  width: 200px;
+  display: inline-block;
+  margin: 10px 10px 10px 10px;
+  height: 200px;
+  vertical-align: middle;
+}
+
+.profile-small img {
+  width: 150px;
+  display: block;
+  margin: auto;
+}
+
+
+.profile-small p {
+  text-align: center;
+  font-size: 18px;
+}
