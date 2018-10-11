@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>John Blischak</title>
+  <title>Features</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
@@ -16,8 +16,48 @@
     integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV"
     crossorigin="anonymous">
   <link rel="stylesheet" href="styles/index.css">
-  <link rel="stylesheet" href="styles/users.css">
-  <link rel="stylesheet" href="styles/user-detail.css">
+  <style>
+    .feature {
+      margin: 50px auto;
+    }
+
+
+    .feature li {
+      font-size: 18px;
+      line-height: 1.5em;
+    }
+
+
+    .feature img {
+      display: block;
+      margin: auto;
+      height: 200px;
+    }
+
+
+    iframe {
+      display: block;
+      margin: 50px auto;
+      border: 1px solid black;
+    }
+
+
+    .btn {
+      display: block;
+      margin: 25px auto;
+      font-size: 32px;
+      width: 300px;
+      background-color: rgb(110, 46, 158);
+      color: white;
+      border: 1px solid white;
+    }
+
+    .btn:hover {
+      background-color: white;
+      color: rgb(110, 46, 158);
+      border: 1px solid black;
+    }
+  </style>
 </head>
 
 <body>
@@ -55,63 +95,62 @@
     <div class="row">
       <div class="col-sm-2"></div>
       <div class="col-sm-8">
-        <!-- User profile -->
-        <div class="profile">
-          <img src="https://avatars3.githubusercontent.com/u/1608317?s=460&v=4"
-            alt="Profile picture of jdblischak">
-          <p>John Blischak</p>
-          <p>
-            <a href="https://github.com/jdblischak"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/jdblischak"><i class="fab fa-twitter"></i></a>
-          </p>
-        </div>
-
-        <h2 class="text-left">Projects</h2>
+        <!-- Features list -->
+        <h1>Features</h1>
         <hr>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <div class="row">
-                <div class="col-sm-6">
-                  <h4><a href="https://jdblischak.github.io/singlcell-qtl">singlecell-qtl</a></h4>
-                </div>
-                <div class="col-sm-6">
-                  <h4 class="text-right" style="block:inline;"><a href="https://github.com/jdblischak/singlecell-qtl"><i
-                        class="fab fa-github"></i></a></h4>
-                </div>
-              </div>
-          </div>
-          <div class="panel-body">
-            <p><strong>Authors:</strong> Abhishek Sarkar, PoYuan Tung, John
-              Blischak, Matthew Stephens</p>
-            <p><strong>Publication:</strong> <a href="https://doi.org/10.1101/424192">https://doi.org/10.1101/424192</a></p>
-            <a href="#" class="btn btn-primary" role="button">Biology</a>
-            <a href="#" class="btn btn-primary" role="button">Genetics</a>
-            <a href="detail-tag.html" class="btn btn-primary" role="button">Single-cell
-              RNA-seq</a>
-          </div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-sm-6">
-                <h4><a href="https://jdblischak.github.io/fucci-seq">fucci-seq</a></h4>
-              </div>
-              <div class="col-sm-6">
-                <h4 class="text-right" style="block:inline;"><a href="https://github.com/jdblischak/fucci-seq"><i
-                      class="fab fa-github"></i></a></h4>
-              </div>
+        <div class="feature">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="images/organized.png" alt="Organized">
+            </div>
+            <div class="col-sm-8">
+              <h3>Organized</h3>
+              <ul>
+                <li>Provides a project template with organized subdirectories</li>
+                <li>Mixes code and results with R Markdown</li>
+                <li>Uses Git to version both source code and results</li>
+              </ul>
             </div>
           </div>
-          <div class="panel-body">
-            <p><strong>Authors:</strong> Joyce Hsiao, PoYuan Tung, John
-              Blischak, Matthew Stephens</p>
-            <a href="#" class="btn btn-primary" role="button">Cell cycle</a>
-            <a href="detail-tag.html" class="btn btn-primary" role="button">Single-cell
-              RNA-seq</a>
+        </div>
+        <div class="feature">
+          <div class="row">
+            <div class="col-sm-8">
+              <h3>Reproducible</h3>
+              <ul>
+                <li>Displays the code version used to create each result</li>
+                <li>Runs each analysis in an isolated R session</li>
+                <li>Records the session information of each analysis</li>
+                <li>Sets the same seed for random number generation for each
+                  analysis</li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/reproducible.png" alt="Reproducible">
+            </div>
           </div>
         </div>
-
+        <div class="feature">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="images/shareable.png" alt="Shareable">
+            </div>
+            <div class="col-sm-8">
+              <h3>Shareable</h3>
+              <ul>
+                <li>Creates a website to present your research results</li>
+                <li>Documents how to host your website for free via <a href="https://pages.github.com/">GitHub
+                    Pages</a></li>
+                <li>Creates links to past versions of results</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/O1wv94sZfvE"
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p>
+          <a href="#" class="btn btn-default" role="button">Install workflowr</a>
+        </p>
       </div>
       <div class="col-sm-2"></div>
     </div>
@@ -151,5 +190,3 @@
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
 </body>
-
-</html>
