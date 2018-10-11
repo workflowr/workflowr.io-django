@@ -1,0 +1,22 @@
+.profile > img {
+  width: 230px;
+  display: block;
+  margin: auto;
+}
+
+
+.profile p {
+  font-size: 32px;
+  text-align: center;
+}
+
+
+/* Override the panel settings in index.css */
+.panel-heading {
+  text-align: left;
+}
+
+
+.panel {
+  min-height: 20px;
+}
