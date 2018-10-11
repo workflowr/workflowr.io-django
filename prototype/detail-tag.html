@@ -2,66 +2,96 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>workflowr.io</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="styles/styles.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css" integrity="sha384-VGCZwiSnlHXYDojsRqeMn3IVvdzTx5JEuHgqZ3bYLCLUBV8rvihHApoA1Aso2TZA" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tag: Single-cell RNA-seq</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css"
+    integrity="sha384-VGCZwiSnlHXYDojsRqeMn3IVvdzTx5JEuHgqZ3bYLCLUBV8rvihHApoA1Aso2TZA"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css"
+    integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/index.css">
+  <style>
+    p {
+      font-size: 18px;
+    }
 
+    /* Override the panel settings in index.css */
+    .panel-heading {
+      text-align: left;
+    }
+
+
+    .panel {
+      min-height: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#navbar-collapsed" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="index.html">
+          <img alt="Brand" src="images/logo-workflowr-inverse.png">
+        </a>
       </div>
-      <div id="navbar" class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse" id="navbar-collapsed">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="users.html">Community</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#" class="btn">Login</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Login</a></li>
         </ul>
-      </div>
-      <!--/.nav-collapse -->
-    </div>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
   </nav>
 
-
   <div class="container-fluid">
-
-    <div class="row content">
+    <div class="row">
       <div class="col-sm-2"></div>
       <div class="col-sm-8">
-        <h1>Tag: Genetics</h1>
-        <p>There are 32 projects with the subject tag "Genetics".</p>
+        <!-- Projects with tag -->
+        <h1>Tag: Single-cell RNA-seq</h1>
+        <p>There are 2 projects with this tag.</p>
         <hr>
-
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4>
-              <a href="https://jdblischak.github.io/singlecell-qtl">singlecell-qtl</a>
-              <a href="https://github.com/jdblischak/singlecell-qtl"><i class="fab fa-github"></i></a>
-            </h4>
+            <div class="row">
+              <div class="col-sm-6">
+                <h4><a href="https://jdblischak.github.io/singlcell-qtl">singlecell-qtl</a></h4>
+              </div>
+              <div class="col-sm-6">
+                <h4 class="text-right" style="block:inline;"><a href="https://github.com/jdblischak/singlecell-qtl"><i
+                      class="fab fa-github"></i></a></h4>
+              </div>
+            </div>
           </div>
           <div class="panel-body">
-            <p><strong>Authors:</strong> Abhishek Sarkar, PoYuan Tung, John Blischak, Matthew Stephens</p>
+            <p><strong>Authors:</strong> Abhishek Sarkar, PoYuan Tung, John
+              Blischak, Matthew Stephens</p>
             <p><strong>Publication:</strong> <a href="https://doi.org/10.1101/424192">https://doi.org/10.1101/424192</a></p>
             <a href="#" class="btn btn-primary" role="button">Biology</a>
             <a href="#" class="btn btn-primary" role="button">Genetics</a>
-            <a href="#" class="btn btn-primary" role="button">Single-cell RNA-seq</a>
+            <a href="detail-tag.html" class="btn btn-primary" role="button">Single-cell
+              RNA-seq</a>
           </div>
         </div>
 
@@ -72,30 +102,17 @@
                 <h4><a href="https://jdblischak.github.io/fucci-seq">fucci-seq</a></h4>
               </div>
               <div class="col-sm-6">
-                <h4 class="text-right" style="block:inline;"><a href="https://github.com/jdblischak/fucci-seq"><i class="fab fa-github"></i></a></h4>
+                <h4 class="text-right" style="block:inline;"><a href="https://github.com/jdblischak/fucci-seq"><i
+                      class="fab fa-github"></i></a></h4>
               </div>
             </div>
           </div>
           <div class="panel-body">
-            <p><strong>Authors:</strong> Joyce Hsiao, PoYuan Tung, John Blischak, Matthew Stephens</p>
+            <p><strong>Authors:</strong> Joyce Hsiao, PoYuan Tung, John
+              Blischak, Matthew Stephens</p>
             <a href="#" class="btn btn-primary" role="button">Cell cycle</a>
-            <a href="#" class="btn btn-primary" role="button">Single-cell RNA-seq</a>
-          </div>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4>
-              <a href="https://jdblischak.github.io/singlecell-qtl">singlecell-qtl</a>
-              <a href="https://github.com/jdblischak/singlecell-qtl"><i class="fab fa-github"></i></a>
-            </h4>
-          </div>
-          <div class="panel-body">
-            <p><strong>Authors:</strong> Abhishek Sarkar, PoYuan Tung, John Blischak</p>
-            <p><strong>Publication:</strong> <a href="https://doi.org/10.1101/424192">https://doi.org/10.1101/424192</a></p>
-            <a href="#" class="btn btn-primary" role="button">Biology</a>
-            <a href="#" class="btn btn-primary" role="button">Genetics</a>
-            <a href="#" class="btn btn-primary" role="button">Single-cell RNA-seq</a>
+            <a href="detail-tag.html" class="btn btn-primary" role="button">Single-cell
+              RNA-seq</a>
           </div>
         </div>
 
@@ -103,21 +120,37 @@
       <div class="col-sm-2"></div>
     </div>
   </div>
-
   <footer class="footer">
-
-    <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-3">
-        <h5>Learn more</h5>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="images/hex-workflowr.png" alt="workflowr hex sticker">
+        </div>
+        <div class="col-sm-4">
+          <h3>About workflowr</h3>
+          <ul>
+            <li><a href="">Team</a></li>
+            <li><a href="">Funding</a></li>
+            <li><a href="">Code of conduct</a></li>
+            <li><a href="https://github.com/jdblischak/worklfowr">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h3>Learn more</h3>
+          <ul>
+            <li><a href="https://jdblischak.github.io/workflowr/articles/">Tutorials</a></li>
+            <li><a href="">How to guides</a></li>
+            <li><a href="">FAQ</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="col-sm-3">
-        <h5>Details</h5>
-        <hr>
-      </div>
-      <div class="col-sm-3"></div>
+      <p style="text-align: center;">&#169; 2018 John Blischak, Peter
+        Carbonetto, Matthew Stephens</p>
     </div>
-    <p class="text-center">Copyright</p>
-
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
 </body>
