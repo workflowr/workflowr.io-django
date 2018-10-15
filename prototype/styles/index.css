@@ -52,7 +52,7 @@ a:hover {
 /* Navigation bar */
 .navbar {
   background-color: rgb(110, 46, 158);
-  font-size: 16px;
+  font-size: 14px;
 }
 
 
@@ -68,14 +68,21 @@ a:hover {
 }
 
 
-.navbar-brand {
-  padding: 0;
+/*
+Using the same selector as the Bootstrap CSS. Just targeting .navbar-brand was
+getting overriden.
+*/
+.navbar > .container-fluid .navbar-brand {
+  margin: 1px 1px 1px 1px;
+  padding: 5px 5px 5px 5px;
+  height: 40px;
 }
 
 
 .navbar-brand > img {
-  max-height: 50px;
+  max-height: 35px;
 }
+
 
 /* Footer */
 footer img {
