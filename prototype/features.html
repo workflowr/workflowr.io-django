@@ -17,40 +17,51 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="styles/index.css">
   <style>
-    .feature {
-      margin: 50px auto;
+    h1 {
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+
+    .feature strong {
+      font-size: 22px;
+    }
+
+
+    .feature ul {
+      padding-left: 10px;
     }
 
 
     .feature li {
-      font-size: 18px;
+      font-size: 14px;
       line-height: 1.5em;
+      padding-bottom: 5px;
     }
 
 
     .feature img {
-      display: block;
-      margin: auto;
-      height: 200px;
+      height: 3em;
     }
 
 
     iframe {
       display: block;
-      margin: 50px auto;
+      margin: 50px auto 10px auto;
       border: 1px solid black;
     }
 
 
     .btn {
       display: block;
-      margin: 25px auto;
-      font-size: 32px;
-      width: 300px;
+      margin: 10px auto;
+      font-size: 18px;
+      width: 200px;
       background-color: rgb(110, 46, 158);
       color: white;
       border: 1px solid white;
     }
+
 
     .btn:hover {
       background-color: white;
@@ -98,59 +109,66 @@
         <!-- Features list -->
         <h1>Features</h1>
         <hr>
+
         <div class="feature">
           <div class="row">
             <div class="col-sm-4">
-              <img src="images/organized.png" alt="Organized">
-            </div>
-            <div class="col-sm-8">
-              <h3>Organized</h3>
-              <ul>
-                <li>Provides a project template with organized subdirectories</li>
-                <li>Mixes code and results with R Markdown</li>
-                <li>Uses Git to version both source code and results</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="row">
-            <div class="col-sm-8">
-              <h3>Reproducible</h3>
-              <ul>
-                <li>Displays the code version used to create each result</li>
-                <li>Runs each analysis in an isolated R session</li>
-                <li>Records the session information of each analysis</li>
-                <li>Sets the same seed for random number generation for each
-                  analysis</li>
-              </ul>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <img src="images/organized.png" alt="Organized">
+                  <strong>Organized</strong>
+                </div>
+                <div class="panel-body">
+                  <ul>
+                    <li>Provides a project template with organized
+                      subdirectories</li>
+                    <li>Mixes code and results with R Markdown</li>
+                    <li>Uses Git to version both source code and results</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="col-sm-4">
-              <img src="images/reproducible.png" alt="Reproducible">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <img src="images/reproducible.png" alt="Reproducible">
+                  <strong>Reproducible</strong>
+                </div>
+                <div class="panel-body">
+                  <ul>
+                    <li>Runs each analysis in an isolated R session</li>
+                    <li>Records the session information of each analysis</li>
+                    <li>Sets the seed for random number generation</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="row">
             <div class="col-sm-4">
-              <img src="images/shareable.png" alt="Shareable">
-            </div>
-            <div class="col-sm-8">
-              <h3>Shareable</h3>
-              <ul>
-                <li>Creates a website to present your research results</li>
-                <li>Documents how to host your website for free via <a href="https://pages.github.com/">GitHub
-                    Pages</a></li>
-                <li>Creates links to past versions of results</li>
-              </ul>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <img src="images/shareable.png" alt="Shareable">
+                  <strong>Shareable</strong>
+                </div>
+                <div class="panel-body">
+                  <ul>
+                    <li>Creates a website to present your research results</li>
+                    <li>Documents how to host your website for free via <a href="https://pages.github.com/">GitHub
+                        Pages</a></li>
+                    <li>Creates links to past versions of results</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/O1wv94sZfvE"
-          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
         <p>
           <a href="#" class="btn btn-default" role="button">Install workflowr</a>
         </p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/O1wv94sZfvE"
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
       </div>
       <div class="col-sm-2"></div>
     </div>
