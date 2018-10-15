@@ -86,7 +86,7 @@ getting overriden.
 
 /* Footer */
 footer img {
-  max-height: 200px;
+  max-height: 100px;
   display: block;
   margin: 25px auto;
 }
@@ -101,7 +101,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 325px;
+  margin-bottom: 225px;
 }
 
 
@@ -114,6 +114,7 @@ body {
   border-top: 25px solid rgb(110, 46, 158);
 }
 
+
 /*
 When the screen is small, the footer covers content. The standard solution is to
 set a fixed height for the footer. This doesn't work since I have columns in the
@@ -121,9 +122,10 @@ footer which expand the height at smaller screen widths.
 */
 @media only screen and (max-width: 750px) {
   body {
-      margin-bottom: 600px;
+      margin-bottom: 450px;
   }
 }
+
 
 .footer a {
   color: white;
@@ -132,4 +134,14 @@ footer which expand the height at smaller screen widths.
 
 .footer a:hover {
   color: rgb(110, 46, 158);
+}
+
+
+.footer h3 {
+  font-size: 18px;
+}
+
+
+.footer p, .footer li {
+  font-size: 12px;
 }
