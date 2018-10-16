@@ -1,13 +1,13 @@
 .profile-small {
-  width: 200px;
+  width: 150px;
   display: inline-block;
-  margin: 10px 10px 10px 10px;
-  height: 200px;
+  height: 150px;
   vertical-align: middle;
 }
 
+
 .profile-small img {
-  width: 150px;
+  width: 100px;
   display: block;
   margin: auto;
 }
@@ -15,5 +15,11 @@
 
 .profile-small p {
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
+}
+
+
+h1 {
+  font-size: 32px;
+  margin: 10px 0;
 }
