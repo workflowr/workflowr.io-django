@@ -7,13 +7,14 @@ h1 {
 .profile > img {
   width: 150px;
   display: block;
-  margin: auto;
+  padding-bottom: 10px;
 }
 
 
 .profile p {
-  font-size: 18px;
-  text-align: center;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1em;
 }
 
 
