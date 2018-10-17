@@ -16,7 +16,7 @@ h1, h2 {
 
 
 /* When the screen is small, decrease the size of the logo. */
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 768px) {
   .flower-logo {
       max-height: 150px;
   }
@@ -120,7 +120,7 @@ When the screen is small, the footer covers content. The standard solution is to
 set a fixed height for the footer. This doesn't work since I have columns in the
 footer which expand the height at smaller screen widths.
 */
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 768px) {
   body {
       margin-bottom: 450px;
   }

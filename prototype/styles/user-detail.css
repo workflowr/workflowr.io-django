@@ -5,9 +5,16 @@ h1 {
 
 
 .profile > img {
-  width: 150px;
+  width: 100%;
   display: block;
   padding-bottom: 10px;
+}
+
+/* When the screen is small, decrease the size of the profile picture. */
+@media only screen and (max-width: 768px) {
+  .well {
+    max-width: 400px;
+  }
 }
 
 
