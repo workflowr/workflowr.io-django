@@ -1,0 +1,56 @@
+---
+title: "UML"
+output: html_document
+---
+
+```{r, setup, include=FALSE}
+library(nomnoml)
+```
+
+```{nomnoml models}
+#edgeMargin: 25
+#spacing: 100
+
+[Project |
+  + name: String
+  + url: String
+  + users: User\[1..*\]
+  + tags: Tag\[0..*\]
+  + publications: Publication\[0..*\]
+]
+
+[Project]1..* - 0..*[Tag]
+
+[Tag |
+  + name: String
+]
+
+[Project]0..* - 1..*[User]
+
+[User |
+  + id: String
+  + name: String
+  + email: String
+  + projects: Project\[0..*\]
+]
+
+[Project]1..* - 0..*[Publication]
+
+[Publication |
+  + title: String
+  + doi: String
+  + pmid: String
+]
+
+```
+
+Interpretation:
+
+* A project can have 0 or more tags
+* A tag can be assigned to 1 or more projects
+* A project can have 1 or more users
+* A user can have 0 or more projects
+    * When they first register their account, they won't have yet registered
+    any projects.
+* A project can have 0 or more associated publications
+* A publication can be associated with 1 or more projects
