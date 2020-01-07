@@ -46,16 +46,16 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='project',
             name='author',
-            field=models.ManyToManyField(to='sites.User'),
+            field=models.ManyToManyField(to='projects.User'),
         ),
         migrations.AddField(
             model_name='project',
             name='publication',
-            field=models.ManyToManyField(to='sites.Publication'),
+            field=models.ManyToManyField(to='projects.Publication'),
         ),
         migrations.AddField(
             model_name='project',
             name='tag',
-            field=models.ManyToManyField(to='sites.Tag'),
+            field=models.ManyToManyField(to='projects.Tag'),
         ),
     ]

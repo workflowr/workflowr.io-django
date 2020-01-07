@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('sites', '0001_initial'),
+        ('projects', '0001_initial'),
     ]
 
     operations = [
@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='project',
             name='author',
-            field=models.ManyToManyField(to='sites.Author'),
+            field=models.ManyToManyField(to='projects.Author'),
         ),
         migrations.AddField(
             model_name='author',
