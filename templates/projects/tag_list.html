@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if tag_list %}
+    <ul>
+    {% for tag in tag_list %}
+        <li><a href="{% url 'projects:tag_detail' tag.id %}">{{ tag.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No tags have been defined.</p>
+{% endif %}
+
+{% endblock %}
