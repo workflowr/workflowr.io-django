@@ -17,8 +17,8 @@ class Tag(models.Model):
         return self.name
 
 class Publication(models.Model):
-    doi = models.CharField(max_length=200)
-    pmid = models.CharField(max_length=200)
+    doi = models.CharField('DOI', max_length=200)
+    pmid = models.CharField('PMID', max_length=200)
     title = models.CharField(max_length=200)
 
     def __str__(self):
@@ -26,7 +26,7 @@ class Publication(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=200)
-    url = models.CharField(max_length=200)
+    url = models.CharField('URL', max_length=200)
     author = models.ManyToManyField(Author)
     tag = models.ManyToManyField(Tag)
     publication = models.ManyToManyField(Publication)
