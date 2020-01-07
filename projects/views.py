@@ -14,3 +14,5 @@ class TagList(generic.ListView):
 
 class TagDetail(generic.DetailView):
     model = Tag
+    slug_field = 'name'
+    slug_url_kwarg = 'name'
