@@ -11,3 +11,11 @@ A website to share and discover [workflowr][] projects.
 [Example UML for models](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models)
 * [nomnoml R pkg for creating UML diagrams](https://github.com/javierluraschi/nomnoml)
 * My [practice-django](https://github.com/jdblischak/practice-django) repo
+* [djangox template](https://github.com/wsvincent/djangox)
+* Authentication - [basic](https://wsvincent.com/django-user-authentication-tutorial-login-and-logout/),
+[custom user](https://wsvincent.com/django-custom-user-model-tutorial/),
+[allauth](https://wsvincent.com/django-allauth-tutorial/),
+[custom user + allauth](https://wsvincent.com/django-allauth-tutorial-custom-user-model/)
+* [Beginner's guide with tests](https://simpleisbetterthancomplex.com/series/2017/09/18/a-complete-beginners-guide-to-django-part-3.html)
+* [Use slug as url parameter instead of pk](https://www.agiliq.com/blog/2019/01/django-when-and-how-use-detailview/#use-slug-as-url-parameter-instead-of-pk)
+* [Django test client](https://docs.djangoproject.com/en/3.0/topics/testing/tools/)
