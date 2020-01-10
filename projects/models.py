@@ -27,7 +27,7 @@ class Tag(models.Model):
 
 
 class Publication(models.Model):
-    doi = models.CharField('DOI', max_length=200)
+    doi = models.CharField('DOI', max_length=200, unique=True)
     pmid = models.CharField('PMID', max_length=200, blank=True)
     title = models.CharField(max_length=200)
 

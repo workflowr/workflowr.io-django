@@ -4,6 +4,22 @@
 
 <h1>{{ project.name }}</h1>
 
+<p>
 <strong>URL:</strong> <a href="{{ project.url }}">{{ project.url }}</a>
+</p>
+
+<p>
+<strong>Author:</strong> <a href="{{ project.author.get_absolute_url }}">{{ project.author.name }}</a>
+</p>
+
+
+{% if project.publications.all %}
+    <h2>Associated  publications</h2>
+    <ul>
+    {% for publication in project.publications.all %}
+        <li>{{ publication.title }} ({{ publication.doi }})</li>
+    {% endfor %}
+    </ul>
+{% endif %}
 
 {% endblock %}

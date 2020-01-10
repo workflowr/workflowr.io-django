@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 
-from .models import Author, Project, Tag
+from .models import Author, Project, Publication, Tag
 
 
 def index(request):
@@ -19,7 +19,8 @@ class AuthorDetail(generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['project_list_for_author'] = Project.objects.filter(author=context['author'])
+        context['project_list_for_author'] = Project.objects.filter(
+            author=context['author'])
         return context
 
 
@@ -32,6 +33,7 @@ class ProjectDetail(generic.DetailView):
     slug_field = 'name'
     slug_url_kwarg = 'name'
 
+
 class TagList(generic.ListView):
     model = Tag
 
@@ -40,3 +42,7 @@ class TagDetail(generic.DetailView):
     model = Tag
     slug_field = 'name'
     slug_url_kwarg = 'name'
+
+
+class PublicationList(generic.ListView):
+    model = Publication

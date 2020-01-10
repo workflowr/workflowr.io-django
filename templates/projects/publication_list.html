@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if publication_list %}
+    <ul>
+    {% for publication in publication_list %}
+        <li>{{ publication.title }} ({{ publication.doi }})</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No publications have been added.</p>
+{% endif %}
+
+{% endblock %}

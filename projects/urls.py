@@ -11,4 +11,5 @@ urlpatterns = [
     path('project/<slug:name>', views.ProjectDetail.as_view(), name='project_detail'),
     path('tags/', views.TagList.as_view(), name='tag_list'),
     path('tag/<slug:name>', views.TagDetail.as_view(), name='tag_detail'),
+    path('publications/', views.PublicationList.as_view(), name='publication_list'),
 ]
