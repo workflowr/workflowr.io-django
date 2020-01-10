@@ -1,6 +1,6 @@
-from django.db import models
-
 from django.contrib.auth.models import User
+from django.db import models
+from django.urls import reverse
 
 
 class Author(models.Model):
@@ -13,10 +13,13 @@ class Author(models.Model):
 
 
 class Tag(models.Model):
-    name = models.CharField(max_length=50, unique=True)
+    name = models.SlugField(primary_key=True)
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('projects:tag_detail', args=[str(self.name)])
 
 
 class Publication(models.Model):
@@ -30,10 +33,10 @@ class Publication(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=200)
-    url = models.CharField('URL', max_length=200)
-    author = models.ManyToManyField(Author)
-    tag = models.ManyToManyField(Tag)
-    publication = models.ManyToManyField(Publication, blank=True)
+    url = models.URLField('URL')
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    tags = models.ManyToManyField(Tag)
+    publications = models.ManyToManyField(Publication, blank=True)
 
     def __str__(self):
         return self.name
