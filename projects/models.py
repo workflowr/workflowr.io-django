@@ -4,9 +4,13 @@ from django.urls import reverse
 
 
 class Author(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # Avoid the complication of a registered user for the moment
+    # user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     email = models.EmailField()
+
+    def get_absolute_url(self):
+        return reverse('projects:author_detail', args=[str(self.name)])
 
     def __str__(self):
         return self.name
@@ -15,11 +19,11 @@ class Author(models.Model):
 class Tag(models.Model):
     name = models.SlugField(primary_key=True)
 
-    def __str__(self):
-        return self.name
-
     def get_absolute_url(self):
         return reverse('projects:tag_detail', args=[str(self.name)])
+
+    def __str__(self):
+        return self.name
 
 
 class Publication(models.Model):

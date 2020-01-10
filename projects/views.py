@@ -1,11 +1,21 @@
 from django.shortcuts import render
 from django.views import generic
 
-from .models import Tag
+from .models import Author, Tag
 
 
 def index(request):
     return render(request, 'index.html')
+
+
+class AuthorList(generic.ListView):
+    model = Author
+
+
+class AuthorDetail(generic.DetailView):
+    model = Author
+    slug_field = 'name'
+    slug_url_kwarg = 'name'
 
 
 class TagList(generic.ListView):
