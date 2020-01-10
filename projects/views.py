@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 
-from .models import Author, Tag
+from .models import Author, Project, Tag
 
 
 def index(request):
@@ -17,6 +17,15 @@ class AuthorDetail(generic.DetailView):
     slug_field = 'name'
     slug_url_kwarg = 'name'
 
+
+class ProjectList(generic.ListView):
+    model = Project
+
+
+class ProjectDetail(generic.DetailView):
+    model = Project
+    slug_field = 'name'
+    slug_url_kwarg = 'name'
 
 class TagList(generic.ListView):
     model = Tag

@@ -36,7 +36,7 @@ class Publication(models.Model):
 
 
 class Project(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.SlugField(max_length=200)
     url = models.URLField('URL')
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)
