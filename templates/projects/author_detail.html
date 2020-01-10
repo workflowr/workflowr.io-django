@@ -6,4 +6,15 @@
 
 <strong>Email:</strong> {{ author.email }}
 
+{% if project_list_for_author %}
+    <h2>Projects</h2>
+    <ul>
+    {% for project in project_list_for_author %}
+        <li><a href="{% url 'projects:project_detail' project.name %}">{{ project.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>This author has not added any projects.</p>
+{% endif %}
+
 {% endblock %}

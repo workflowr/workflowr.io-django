@@ -17,6 +17,11 @@ class AuthorDetail(generic.DetailView):
     slug_field = 'name'
     slug_url_kwarg = 'name'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['project_list_for_author'] = Project.objects.filter(author=context['author'])
+        return context
+
 
 class ProjectList(generic.ListView):
     model = Project
