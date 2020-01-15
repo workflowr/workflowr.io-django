@@ -10,7 +10,8 @@ class Author(models.Model):
     email = models.EmailField()
 
     def get_absolute_url(self):
-        return reverse('projects:author_detail', args=[str(self.name)])
+        return reverse('projects:author_detail',
+                       args=[self.project_set.get().platform.name, self.name])
 
     def __str__(self):
         return self.name
@@ -20,7 +21,7 @@ class Tag(models.Model):
     name = models.SlugField(primary_key=True)
 
     def get_absolute_url(self):
-        return reverse('projects:tag_detail', args=[str(self.name)])
+        return reverse('projects:tag_detail', args=[self.name])
 
     def __str__(self):
         return self.name
@@ -40,10 +41,11 @@ class Platform(models.Model):
     url = models.URLField('URL')
 
     def get_absolute_url(self):
-        return reverse('projects:platform_detail', args=[str(self.name)])
+        return reverse('projects:platform_detail', args=[self.name])
 
     def __str__(self):
         return self.name
+
 
 class Project(models.Model):
     name = models.SlugField(max_length=200)
