@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ platform.name }}</h1>
+
+<strong>URL:</strong>  <a href="{{ platform.url }}">{{ platform.url }}</a>
+
+{% if project_list_for_platform %}
+    <h2>Projects</h2>
+    <ul>
+    {% for project in project_list_for_platform %}
+        <li><a href="{% url 'projects:project_detail' project.name %}">{{ project.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>This platform has no projects.</p>
+{% endif %}
+
+{% endblock %}

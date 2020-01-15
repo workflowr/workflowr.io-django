@@ -35,10 +35,21 @@ class Publication(models.Model):
         return self.doi
 
 
+class Platform(models.Model):
+    name = models.SlugField(primary_key=True)
+    url = models.URLField('URL')
+
+    def get_absolute_url(self):
+        return reverse('projects:platform_detail', args=[str(self.name)])
+
+    def __str__(self):
+        return self.name
+
 class Project(models.Model):
     name = models.SlugField(max_length=200)
     url = models.URLField('URL')
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    platform = models.ForeignKey(Platform, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag)
     publications = models.ManyToManyField(Publication, blank=True)
 

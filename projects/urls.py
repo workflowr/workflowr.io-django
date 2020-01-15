@@ -12,4 +12,5 @@ urlpatterns = [
     path('tags/', views.TagList.as_view(), name='tag_list'),
     path('tag/<slug:name>', views.TagDetail.as_view(), name='tag_detail'),
     path('publications/', views.PublicationList.as_view(), name='publication_list'),
+    path('<slug:name>/', views.PlatformDetail.as_view(), name='platform_detail'),
 ]

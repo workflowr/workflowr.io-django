@@ -4,22 +4,23 @@
 
 <h1>{{ project.name }}</h1>
 
-<p>
-<strong>URL:</strong> <a href="{{ project.url }}">{{ project.url }}</a>
-</p>
+<ul>
+  <li><strong>URL:</strong> <a href="{{ project.url }}">{{ project.url }}</a></li>
+  <li><strong>Platform:</strong> <a href="{{ project.platform.url }}">{{ project.platform.name }}</a></li>
+</ul>
 
 <p>
-<strong>Author:</strong> <a href="{{ project.author.get_absolute_url }}">{{ project.author.name }}</a>
+  <strong>Author:</strong> <a href="{{ project.author.get_absolute_url }}">{{ project.author.name }}</a>
 </p>
 
 
 {% if project.publications.all %}
-    <h2>Associated  publications</h2>
-    <ul>
-    {% for publication in project.publications.all %}
-        <li>{{ publication.title }} ({{ publication.doi }})</li>
-    {% endfor %}
-    </ul>
+<h2>Associated publications</h2>
+<ul>
+  {% for publication in project.publications.all %}
+  <li>{{ publication.title }} ({{ publication.doi }})</li>
+  {% endfor %}
+</ul>
 {% endif %}
 
 {% endblock %}

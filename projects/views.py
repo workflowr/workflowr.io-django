@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 
-from .models import Author, Project, Publication, Tag
+from .models import Author, Platform, Project, Publication, Tag
 
 
 def index(request):
@@ -46,3 +46,15 @@ class TagDetail(generic.DetailView):
 
 class PublicationList(generic.ListView):
     model = Publication
+
+
+class PlatformDetail(generic.DetailView):
+    model = Platform
+    slug_field = 'name'
+    slug_url_kwarg = 'name'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['project_list_for_platform'] = Project.objects.filter(
+            platform=context['platform'])
+        return context
