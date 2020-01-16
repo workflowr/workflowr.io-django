@@ -21,12 +21,12 @@ pub1, created = Publication.objects.get_or_create(doi="10.1000/1", title="public
 pub2, created = Publication.objects.get_or_create(doi="10.1000/2", title="publication 2")
 pub3, created = Publication.objects.get_or_create(doi="10.1000/3", title="publication 3")
 
-plat1, created = Platform.objects.get_or_create(name="GitHub", url="https://github.com")
-plat2, created = Platform.objects.get_or_create(name="GitLab", url="https://gitlab.com")
+plat1, created = Platform.objects.get_or_create(name="GitHub", url="https://github.com/")
+plat2, created = Platform.objects.get_or_create(name="GitLab", url="https://gitlab.com/")
 
-proj1, created = Project.objects.get_or_create(name="project_1", url="https://example.com/1", author=Author.objects.get(id=1), platform=Platform.objects.get(name="GitHub"))
-proj2, created = Project.objects.get_or_create(name="project_2", url="https://example.com/2", author=Author.objects.get(id=2), platform=Platform.objects.get(name="GitHub"))
-proj3, created = Project.objects.get_or_create(name="project_3", url="https://example.com/3", author=Author.objects.get(id=3), platform=Platform.objects.get(name="GitLab"))
+proj1, created = Project.objects.get_or_create(name="project_1", url="https://example.com/1/", author=Author.objects.get(id=1), platform=Platform.objects.get(name="GitHub"))
+proj2, created = Project.objects.get_or_create(name="project_2", url="https://example.com/2/", author=Author.objects.get(id=2), platform=Platform.objects.get(name="GitHub"))
+proj3, created = Project.objects.get_or_create(name="project_3", url="https://example.com/3/", author=Author.objects.get(id=3), platform=Platform.objects.get(name="GitLab"))
 
 proj1.publications.add(pub1)
 proj2.publications.add(pub2)
