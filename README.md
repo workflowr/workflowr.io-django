@@ -4,6 +4,18 @@ A website to share and discover [workflowr][] projects.
 
 [workflowr]: https://github.com/jdblischak/worklfowr
 
+## Create a UML diagram of database schema
+
+Use the [graph_models][] feature of [django-extensions][] to create a UML
+diagram of the database schema specified in `projects/models.py`.
+
+```
+python manage.py graph_models --pydot projects -o graph-model.png
+```
+
+[django-extensions]: https://django-extensions.readthedocs.io/
+[graph_models]: https://django-extensions.readthedocs.io/en/latest/graph_models.html
+
 ## Resources
 
 * [Writing your first Django app](https://docs.djangoproject.com/en/2.2/intro/tutorial01/)
