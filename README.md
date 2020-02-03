@@ -4,12 +4,34 @@ A website to share and discover [workflowr][] projects.
 
 [workflowr]: https://github.com/jdblischak/worklfowr
 
+## Setup computational environment
+
+The software dependencies are managed by conda and specified in
+[environment.yml](environment.yml). Install [Miniconda][] to get started.
+
+```
+# Create the environment
+conda env create --file environment.yml
+
+# Activate the environment
+conda activate wio
+
+# Update the environment
+conda env update --file environment.yml
+
+# Deactivate the environment
+conda deactivate wio
+```
+
+[Miniconda]: https://docs.conda.io/en/latest/miniconda.html
+
 ## Create a UML diagram of database schema
 
 Use the [graph_models][] feature of [django-extensions][] to create a UML
 diagram of the database schema specified in `projects/models.py`.
 
 ```
+conda activate wio
 python manage.py graph_models --pydot projects -o graph-model.png
 ```
 
