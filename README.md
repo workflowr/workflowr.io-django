@@ -25,6 +25,36 @@ conda deactivate wio
 
 [Miniconda]: https://docs.conda.io/en/latest/miniconda.html
 
+## Development
+
+```
+# Run the test suite
+python manage.py test
+
+# Restart database for interactive testing
+bash setup-models.sh
+
+# Create a temporary superuser for testing the site
+bash createsuperuser.sh
+
+# Run the development server
+python manage.py runserver
+
+# Start an interactive shell with Django settings activated
+python manage.py shell
+```
+
+## Endpoints
+
+* `projects/` - List all projects
+* `projects/github/` - List all projects hosted on GitHub
+* `projects/github/user/` - List all of user's projects hosted on GitHub
+* `projects/github/user/project/` - Detail view for project
+* `authors/` - List all authors
+* `tags/` - List all tags
+* `tag/tagname/` - List all projects tagged with "tagname"
+* `publications/` - List all publications
+
 ## Create a UML diagram of database schema
 
 Use the [graph_models][] feature of [django-extensions][] to create a UML
