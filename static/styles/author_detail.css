@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+main img {
+    display: block;
+    margin: 0 auto;
+    height: 25rem;
+}
+
+.btn {
+    background-color: rgb(110, 46, 158);
+    border: 1px solid white;
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(110, 46, 158);
+    border: 1px solid black;
+}

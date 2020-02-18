@@ -1,18 +1,56 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block title%}{{ author.name }}{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/author_detail.css' %}">
+{% endblock %}
 
 {% block content %}
 
+{% if author.avatar %}
+  <img src="{{ author.avatar }}"
+       alt="Profile picture of {{ author.name }}">
+{% endif %}
+
 <h1>{{ author.name }}</h1>
 
-<strong>Email:</strong> {{ author.email }}
-
 {% if project_list_for_author %}
-    <h2>Projects</h2>
-    <ul>
     {% for project in project_list_for_author %}
-        <li><a href="{% url 'projects:project_detail' project.platform.name project.author.name project.name %}">{{ project.name }}</a></li>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-sm-6">
+                <h4><a href="{% url 'projects:project_detail' project.platform.name project.author.name project.name %}">{{ project.name }}</a></h4>
+              </div>
+              <div class="col-sm-6">
+                <h4 class="text-right" style="block:inline;"><a href="{{ project.url }}">
+                <i class="fab fa-github"></i></a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <p>
+              <strong>Owner:</strong>
+              <a href="{{ project.author.get_absolute_url }}">{{ project.author.name }}</a>
+            </p>
+            {% if project.publications.all %}
+              {% for publication in project.publications.all %}
+                <p>
+                  <strong>Publication:</strong>
+                   <a href="https://doi.org/{{ publication.doi }}">{{ publication.title }}</a>
+                </p>
+              {% endfor %}
+            {% endif %}
+            {% if project.tags.all %}
+              {% for tag in project.tags.all %}
+                <a href="{{ tag.get_absolute_url }}" class="btn btn-primary" role="button">{{ tag.name }}</a>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
     {% endfor %}
-    </ul>
 {% else %}
     <p>This author has not added any projects.</p>
 {% endif %}
