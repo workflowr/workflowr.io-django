@@ -3,6 +3,14 @@ main {
     border-bottom: 10px solid rgb(110, 46, 158);
 }
 
+a {
+    color: rgb(110, 46, 158);
+}
+
+a:hover {
+    color: black;
+}
+
 
 /* Navigation bar */
 

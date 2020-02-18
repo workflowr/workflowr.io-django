@@ -32,13 +32,16 @@ proj.publications.add(pub)
 
 # https://github.com/jdblischak/fucci-seq
 repo = gh.get_repo("jdblischak/fucci-seq")
-repo.get_topics()
+tags = repo.get_topics()
 proj, created = Project.objects.get_or_create(
     name=repo.name,
     url=repo.html_url,
     author=aut,
     platform=Platform.objects.get(name="GitHub")
 )
+for tag in tags:
+    tag_model, created = Tag.objects.get_or_create(name=tag)
+    proj.tags.add(tag)
 
 # https://github.com/stephenslab/wflow-divvy
 repo = gh.get_repo("stephenslab/wflow-divvy")

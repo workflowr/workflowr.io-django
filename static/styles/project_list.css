@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: rgb(110, 46, 158);
+    border: 1px solid white;
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(110, 46, 158);
+    border: 1px solid black;
+}
