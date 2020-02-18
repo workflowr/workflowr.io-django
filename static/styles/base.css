@@ -1,0 +1,44 @@
+footer {
+    border-top: 1px solid black;
+}
+
+main {
+    min-height: 90vh;
+    border-bottom: 5px solid black;
+}
+
+
+/* Navigation bar */
+
+.navbar {
+    background-color: rgb(110, 46, 158);
+    font-size: 14px;
+}
+
+
+/* Overriding bootstrap defaults */
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: rgb(110, 46, 158);
+    background-color: white;
+}
+
+
+/*
+  Using the same selector as the Bootstrap CSS. Just targeting .navbar-brand
+  was getting overriden.
+*/
+
+.navbar>.container-fluid .navbar-brand {
+    margin: 1px 1px 1px 1px;
+    padding: 5px 5px 5px 5px;
+    height: 40px;
+}
+
+.navbar-brand>img {
+    max-height: 35px;
+}
