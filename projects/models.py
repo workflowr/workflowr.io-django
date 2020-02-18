@@ -56,5 +56,9 @@ class Project(models.Model):
     tags = models.ManyToManyField(Tag)
     publications = models.ManyToManyField(Publication, blank=True)
 
+    def get_absolute_url(self):
+        return reverse('projects:project_detail',
+                       args=[self.platform.name, self.author.name, self.name])
+
     def __str__(self):
         return self.name

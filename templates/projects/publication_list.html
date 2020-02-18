@@ -1,13 +1,37 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block title %}Publications{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/project_list.css' %}">
+{% endblock %}
 
 {% block content %}
 
+<h1>Publications</h1>
 {% if publication_list %}
-    <ul>
     {% for publication in publication_list %}
-        <li>{{ publication.title }} ({{ publication.doi }})</li>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+              <h4>{{ publication.title }}</h4>
+        </div>
+        <div class="panel-body">
+          <p>
+            <strong>Source:</strong>
+            <a href="https://doi.org/{{ publication.doi }}">{{ publication.doi }}</a>
+          </p>
+          {% if publication.project_set.all %}
+            <p>Supported by:</p>
+            <ul>
+            {% for project in publication.project_set.all %}
+              <li><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
     {% endfor %}
-    </ul>
 {% else %}
     <p>No publications have been added.</p>
 {% endif %}
