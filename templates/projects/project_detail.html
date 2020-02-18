@@ -1,4 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ project.name }}{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/project_list.css' %}">
+{% endblock %}
 
 {% block content %}
 
@@ -7,18 +14,14 @@
 <ul>
   <li><strong>URL:</strong> <a href="{{ project.url }}">{{ project.url }}</a></li>
   <li><strong>Platform:</strong> <a href="{{ project.platform.url }}">{{ project.platform.name }}</a></li>
+  <li><strong>Owner:</strong> <a href="{{ project.author.get_absolute_url }}">{{ project.author.name }}</a></li>
 </ul>
-
-<p>
-  <strong>Author:</strong> <a href="{{ project.author.get_absolute_url }}">{{ project.author.name }}</a>
-</p>
-
 
 {% if project.publications.all %}
 <h2>Associated publications</h2>
 <ul>
   {% for publication in project.publications.all %}
-  <li>{{ publication.title }} ({{ publication.doi }})</li>
+  <li><a href="https://doi.org/{{ publication.doi }}">{{ publication.title }}</a></li>
   {% endfor %}
 </ul>
 {% endif %}
