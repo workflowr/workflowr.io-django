@@ -1,70 +1,62 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block title %}workflowr.io{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/index.css' %}">
+{% endblock %}
 
 {% block content %}
-<div class="row">
-  <div class="col-sm-6">
-    {% load static %}
-    <img style="width: 400px; height: 400px;" alt="workflowr hex" src="{% static 'images/workflowr-hex.png' %}">
-  </div>
-  <div class="col-sm-6">
-    <div class="well">
-      <h4>Organized</h4>
-      <p>
-        No more struggling to find your data and scripts.
-      </p>
-    </div>
-    <div class="well">
-      <h4>Reproducible</h4>
-      <p>
-        Automatically follow best practices like using version control while you focus
-        on your data analysis.
-      </p>
-    </div>
-    <div class="well">
-      <h4>Shareable</h4>
-      <p>
-        Share your research with the entire scientific community.
-      </p>
-    </div>
-  </div>
+
+<div class="jumbotron">
+  <img alt="workflowr" src="https://github.com/workflowr/workflowr-assets/raw/master/img/hex-workflowr.png">
 </div>
 
 <br>
 
+<!-- Actions -->
 <div class="row">
   <div class="col-sm-4">
     <div class="panel panel-default">
-      <div class="panel-heading">Search</div>
-      <div class="panel-body">
-        Find interesting open science projects.
+      <div class="panel-heading">
+        <h3>Discover</h3>
       </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">Create</div>
       <div class="panel-body">
-        Start your own workflowr project
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">Contribute</div>
-      <div class="panel-body">
-        <p>
-          There are lots of ways you can support our open science community:
-        </p>
+        Search the catalog of workflowr projects to find open,
+        reproducible science in your field.
         <ul>
-          <li>
-            Share your favorite projects on Twitter
-          </li>
-          <li>
-            Write a blog post
-          </li>
-          <li>
-            Fix an open Issue
-          </li>
+          <li><a href="">Search all projects</a></li>
+          <li><a href="">Search by tags</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>Create</h3>
+      </div>
+      <div class="panel-body">
+        Use workflowr to manage and share your data analysis projects.
+        <ul>
+          <li><a href="">Start a new project</a></li>
+          <li><a href="">Register an existing project</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>Contribute</h3>
+      </div>
+      <div class="panel-body">
+        Contribute to open science by supporting the workflowr
+        community.
+        <ul>
+          <li><a href="">Write a How-to guide</a></li>
+          <li><a href="">Report or fix software bugs</a></li>
         </ul>
       </div>
     </div>
