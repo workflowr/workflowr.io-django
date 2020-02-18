@@ -1,13 +1,27 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block title%}Community{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/author_list.css' %}">
+{% endblock %}
 
 {% block content %}
 
+<h1>Community</h1>
 {% if author_list %}
-    <ul>
+  <div class="row">
     {% for author in author_list %}
-        <li><a href="{{ author.get_absolute_url }}">{{ author.name }}</a></li>
+      <div class="col-sm-4">
+        {% if author.avatar %}
+          <img src="{{ author.avatar }}"
+               alt="Profile picture of {{ author.name }}">
+        {% endif %}
+        <p><a href="{{ author.get_absolute_url }}">{{ author.name }}</a></p>
+      </div>
     {% endfor %}
-    </ul>
+  </div>
 {% else %}
     <p>No authors have been defined.</p>
 {% endif %}

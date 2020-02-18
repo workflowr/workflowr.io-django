@@ -1,0 +1,10 @@
+h1 {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+main img {
+    width: 75%;
+}

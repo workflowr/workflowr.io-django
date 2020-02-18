@@ -15,7 +15,11 @@ sys.stderr.write("Logged into GitHub as %s\n"%(gh_me.login))
 
 # https://github.com/jdblischak/singlecell-qtl
 repo = gh.get_repo("jdblischak/singlecell-qtl")
-aut, created = Author.objects.get_or_create(name=repo.owner.login, email="jdblischak@email.com")
+aut, created = Author.objects.get_or_create(
+    name=repo.owner.login,
+    email="jdblischak@email.com",
+    avatar=repo.owner.avatar_url
+)
 repo.get_topics()
 pub, created = Publication.objects.get_or_create(
     doi="10.1371/journal.pgen.1008045",
@@ -45,7 +49,11 @@ for tag in tags:
 
 # https://github.com/stephenslab/wflow-divvy
 repo = gh.get_repo("stephenslab/wflow-divvy")
-aut, created = Author.objects.get_or_create(name=repo.owner.login, email="stephenslab@email.com")
+aut, created = Author.objects.get_or_create(
+    name=repo.owner.login,
+    email="stephenslab@email.com",
+    avatar=repo.owner.avatar_url
+)
 repo.get_topics()
 proj, created = Project.objects.get_or_create(
     name=repo.name,

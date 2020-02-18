@@ -8,6 +8,7 @@ class Author(models.Model):
     # user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     email = models.EmailField()
+    avatar = models.URLField(blank=True)
 
     def get_absolute_url(self):
         return reverse('projects:author_detail',
