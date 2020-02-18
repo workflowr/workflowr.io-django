@@ -26,3 +26,4 @@ python manage.py migrate
 python manage.py test
 
 python populate-database.py
+python repos.py

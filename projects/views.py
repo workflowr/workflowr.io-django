@@ -29,8 +29,10 @@ class AuthorDetail(generic.DetailView):
         platform_slug = self.kwargs.get('platform_slug', None)
         author_slug = self.kwargs.get('author_slug', None)
         try:
-            obj = queryset.get(
-                name=author_slug, project__platform__name=platform_slug)
+            obj = (queryset
+                   .filter(project__platform__name=platform_slug)
+                   .distinct()
+                   .get(name=author_slug))
         except queryset.model.DoesNotExist:
             raise Http404("No Author found matching the query")
         return obj
@@ -51,9 +53,11 @@ class ProjectDetail(generic.DetailView):
         author_slug = self.kwargs.get('author_slug', None)
         project_slug = self.kwargs.get('project_slug', None)
         try:
-            obj = queryset.get(
-                name=project_slug, author__name=author_slug,
-                platform__name=platform_slug)
+            obj = (queryset
+                   .filter(platform__name=platform_slug,
+                           author__name=author_slug)
+                   .distinct()
+                   .get(name=project_slug))
         except queryset.model.DoesNotExist:
             raise Http404("No Author found matching the query")
         return obj

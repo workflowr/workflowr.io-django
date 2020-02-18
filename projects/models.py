@@ -11,7 +11,7 @@ class Author(models.Model):
 
     def get_absolute_url(self):
         return reverse('projects:author_detail',
-                       args=[self.project_set.get().platform.name, self.name])
+                       args=[self.project_set.filter()[0].platform.name, self.name])
 
     def __str__(self):
         return self.name
