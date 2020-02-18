@@ -11,6 +11,11 @@
 
 <h1>Projects</h1>
 {% if project_list %}
+  <p>Filter by platform:
+  {% for platform in platforms %}
+    <a href="{{ platform.get_absolute_url }}" class="btn btn-primary" role="button">{{ platform.name }}</a>
+  {% endfor %}
+  </p>
     {% for project in project_list %}
         <div class="panel panel-default">
           <div class="panel-heading">

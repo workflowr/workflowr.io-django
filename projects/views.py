@@ -41,6 +41,11 @@ class AuthorDetail(generic.DetailView):
 class ProjectList(generic.ListView):
     model = Project
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['platforms'] = Platform.objects.all()
+        return context
+
 
 class ProjectDetail(generic.DetailView):
     model = Project
