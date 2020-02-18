@@ -1,5 +1,6 @@
 main {
     min-height: 90vh;
+    border-bottom: 10px solid rgb(110, 46, 158);
 }
 
 
