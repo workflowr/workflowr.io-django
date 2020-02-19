@@ -15,6 +15,9 @@
   {% for platform in platforms %}
     <a href="{{ platform.get_absolute_url }}" class="btn btn-primary" role="button">{{ platform.name }}</a>
   {% endfor %}
+  {% if tags %}
+  <p>Filter by <a href="{% url 'projects:tag_list' %}">tag</a></p>
+  {% endif %}
   </p>
     {% for project in project_list %}
         <div class="panel panel-default">

@@ -1,13 +1,21 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block title%}Tags{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/project_list.css' %}">
+{% endblock %}
 
 {% block content %}
 
+<h1>Tags</h1>
 {% if tag_list %}
-    <ul>
+  <p>
     {% for tag in tag_list %}
-        <li><a href="{% url 'projects:tag_detail' tag.name %}">{{ tag.name }}</a></li>
+        <a href="{{ tag.get_absolute_url }}" class="btn btn-primary" role="button">{{ tag.name }}</a>
     {% endfor %}
-    </ul>
+  </p>
 {% else %}
     <p>No tags have been defined.</p>
 {% endif %}
