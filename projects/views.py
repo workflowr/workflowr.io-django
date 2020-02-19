@@ -78,6 +78,12 @@ class TagDetail(generic.DetailView):
     slug_field = 'name'
     slug_url_kwarg = 'name'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['project_list_for_tag'] = Project.objects.filter(
+            tags=context['tag'])
+        return context
+
 
 class PublicationList(generic.ListView):
     model = Publication
