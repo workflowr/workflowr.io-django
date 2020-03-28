@@ -25,8 +25,7 @@ SECRET_KEY = 'p*bcjnbtbd!l(lfy16_xf=ouay558cxshl_n209=cxf441--xj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['workflowr.herokuapp.com']
 
 # Application definition
 
