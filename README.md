@@ -37,12 +37,50 @@ bash setup-models.sh
 # Create a temporary superuser for testing the site
 bash createsuperuser.sh
 
-# Run the development server
+# Run the development server (http://localhost:8000/)
 python manage.py runserver
 
 # Start an interactive shell with Django settings activated
 python manage.py shell
 ```
+
+## Heroku
+
+```
+# Install Heroku CLI app
+sudo snap install heroku --classic
+
+# Login (opens browser for authentication)
+heroku login
+
+# Run the development server (http://localhost:5000/)
+heroku local web
+
+# Add heroku remote
+git remote add  heroku https://git.heroku.com/workflowr.git
+
+# Deploy the site
+git push heroku master
+
+# Open the site in the browser
+heroku open
+
+# View the server logs
+heroku logs --tail
+
+# View currently used resources
+heroku ps
+
+# Start an interactive shell on the remote server
+heroku run python manage.py shell
+
+# Run the database migrations on the remote server
+heroku run python manage.py migrate
+```
+
+* [Getting Started on Heroku with Python](https://devcenter.heroku.com/articles/getting-started-with-python)
+* [heroku/python-getting-started](https://github.com/heroku/python-getting-started)
+* [Configuring Django Apps for Heroku](https://devcenter.heroku.com/articles/django-app-configuration)
 
 ## Endpoints
 
