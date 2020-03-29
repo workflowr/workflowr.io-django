@@ -7,6 +7,8 @@ channels:
 dependencies:
   - django
   - django-extensions
+  - django-heroku
+  - gunicorn
   - ipdb
   - ipython
   - pydot
