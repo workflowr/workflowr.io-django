@@ -2,6 +2,8 @@ django
 django-extensions
 django-heroku
 gunicorn
+ipdb
+ipython
 pydot
 pygithub
 whitenoise
