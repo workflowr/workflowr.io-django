@@ -14,4 +14,5 @@ dependencies:
   - pydot
   - pygithub
   - python
+  - python-dotenv
   - whitenoise
