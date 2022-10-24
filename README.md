@@ -1,3 +1,11 @@
+**ARCHIVED:** I instead decided to deploy [workflowr.io][] using a combination
+of the static site generator Hugo (website source code at [workflowr/workflowr.io][repo])
+and a GitHub app (also named [workflowr.io][app]) to register projects.
+
+[workflowr.io]: https://workflowr.io/
+[repo]: https://github.com/workflowr/workflowr.io
+[app]: https://github.com/apps/workflowr-io
+
 # workflowr.io
 
 A website to share and discover [workflowr][] projects.
